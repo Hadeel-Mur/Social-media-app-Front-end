@@ -1,0 +1,77 @@
+@import "../../style.scss";
+
+.leftBar{
+    @include themify($themes) {
+        flex: 1;
+        padding: 10px;
+        border-right: 2px solid lightgray;
+        display: flex;
+        position: sticky;
+        top: 50px;
+        background-color: themed("bg");
+        height: calc(100vh - 50px);
+        color: themed("textColor");
+        @include mobile {
+            display: none;
+          }
+        
+            .menu{
+                
+                .user{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    border: 2px solid #ffce35;
+                    padding: 8px;
+                    border-radius: 40px;
+                    > * {
+                       
+                        font-size: 28px; 
+                        
+                  
+                      }
+                      .link{
+                        text-decoration: none;
+                        color: themed("textColor");
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5em;
+                      }
+                    span{
+                        font-weight: bolder;
+                        font-size: 20px; 
+                        
+                        
+                    }
+                }
+    
+                .item{
+                    margin-top:60px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    border: 2px solid #ffce35;
+                    padding: 8px;
+                    border-radius: 40px;
+                    
+                    .link{
+                        text-decoration: none;
+                        color: themed("textColor");
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5em;
+                      }
+                   
+                    span{
+                        font-weight: bolder;
+                        font-size: 20px; 
+                        cursor: pointer;
+                        text-decoration: none;
+    
+                    }
+                    }
+            }
+        }
+    }
+
+    

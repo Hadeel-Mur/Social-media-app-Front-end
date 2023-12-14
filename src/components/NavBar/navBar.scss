@@ -1,0 +1,112 @@
+// $primary: white;
+// $secondary: #202220;
+@import '../../style.scss';
+
+.navBar {
+  @include themify($themes){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid lightgray;
+  position: sticky;
+  top: 0;
+  background-color: themed("bg");
+  height: 40px;
+  color: themed("textColor");
+  z-index: 1;
+  min-width: 100vw;
+  
+  .left {
+    display: flex;
+    align-items: center;
+   
+   
+    
+      span {
+        font-weight:bolder;
+        margin: 20px 20px;
+        font-size: 40px; 
+        color: #ffce35;
+        text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.4);
+        @include mobile {
+          display: none;
+        }
+      }
+    
+    .search {
+      display: flex;
+      align-items: center; 
+      border-bottom: 2px solid #ccc;
+      border-right: 2px solid #ccc;
+      border-radius: 5px;
+      padding: 5px;
+      gap: 10px;
+      
+      input {
+        margin-left: 10px;
+        border: none;
+        font-size: 18px;
+        padding: 8px;
+        width:360px;
+        background-color: themed("bg");
+        &:focus {
+            outline: none;}
+        @include mobile {
+          width: 60px;
+          
+        }
+       
+      }
+    }
+  }
+
+  .right {
+    @include mobile {
+      display: flex;
+      gap: 1em;
+      padding: 10px 2px;
+    }
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    border: 2px solid #ffce35;
+    
+    padding: 8px;
+    border-radius: 40px;
+    > * {
+      
+      cursor: pointer;
+      color: themed("textColor");
+
+    }
+
+    .user {
+      align-items: center;
+      display: flex;
+      gap: 5px;
+      img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        
+      }
+      span {
+        font-weight: bold;
+        
+      }
+      @include mobile {
+        display: none;
+        
+      }
+    }
+  }
+}
+
+  }
+  
+
+
+
+

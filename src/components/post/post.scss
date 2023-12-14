@@ -1,0 +1,75 @@
+@import "../../style.scss";
+
+.post{
+    @include themify($themes){
+        border-radius: 20px;
+        background-color: themed("bg");
+        color: themed("textColor");
+        .container{
+            padding: 20px;
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .userInfo{
+                    display: flex;
+                    gap: 0.5em;
+                    
+    
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+    
+                    }
+                    .details{
+                        display: flex;
+                        flex-direction: column;
+                        
+    
+                        .name{
+                            font-weight: 500;
+    
+                        }
+                        .date{
+                            font-size: 12px;
+    
+                        }
+    
+                    }
+                    
+                }
+                .delete{
+                    cursor: pointer;
+                }
+            }
+            .content{
+                margin: 20px 0px;
+
+                img{
+                    width: 100%;
+                    max-height: 500px;
+                    object-fit: cover;
+                    margin-top: 20px;
+                }
+            }
+
+            .actions{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                justify-content: center;
+
+                .item{
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                    cursor: pointer;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    }
+    

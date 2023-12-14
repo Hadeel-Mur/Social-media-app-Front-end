@@ -1,0 +1,40 @@
+$themes: (
+    light:(
+         textColor: black,
+         bgSoft:white,
+         bg:#eeeeee,
+
+    ),
+    dark:(
+        textColor: rgb(150, 150, 150),
+         bg:#222,
+         bgSoft:#333,
+    ),
+);
+
+
+@mixin themify($themes) {
+    @each $theme-name, $map in $themes {
+        .theme-#{$theme-name} & {
+            $theme-map: () !global;
+            
+            @each $key, $value in $map {
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+            
+            @content;
+            
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}

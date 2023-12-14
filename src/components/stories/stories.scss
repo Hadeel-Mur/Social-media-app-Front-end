@@ -1,0 +1,54 @@
+@import "../../style.scss"; 
+ 
+ .stories{
+    @include themify($themes){
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    margin-bottom: 30px;
+    
+    
+
+    .story{
+        flex: 1;
+        border-radius: 100px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 60%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+        span {
+            
+            align-items: center;
+            position: absolute;
+            color: white;
+            background-color:#ffce35;
+            padding: 6px;
+            border-radius: 50%;
+            color: black;
+            bottom: 0;
+            font-weight: bold;
+            
+        }
+        button{
+            position: absolute;
+            border: none;
+            background-color: #ffce35;
+            color: black;
+            cursor: pointer;
+            border-radius: 50%;
+            font-weight: bold;
+            top: 0;
+            cursor: pointer;
+        }
+    }
+ } }
