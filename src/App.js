@@ -15,7 +15,6 @@ import Gif from "./pages/gif/Gif"
 import Logout from "@mui/icons-material/Logout";
 import Friends from "./pages/friends/Friends";
 import Saved from "./pages/saved/Saved";
-// import Post from "./components/post/Post";
 
 
 
